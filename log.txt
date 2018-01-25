@@ -1,0 +1,492 @@
+September 12, 2017:
+ - Created a project called Longana and build the seven necessary classes for the Longana game. The seven necessary 
+   classes consist of Tournament, Round, Player, Computer, Human, Stock, Hand, LayoutView, and Layout. 
+   (15 mins)
+
+ - Create an outline of the basic parts of the Longana game and the functions and classes that will be need. 
+   (1 hour)
+   
+Total: (1 hour 15 mins)
+
+
+September 13, 2017:
+ - In the Tournament class, defined and outline a function called tournamentGame(). This function will start a tournament 
+   and ask the user if they will like to play a saved game or a new game. This function will also continue until one player 
+   gains a score equal or greater than the score they requested. This function is not finished, this is just an outline. 
+   (1 hour)
+
+ - Defined a function called askPoints() which will ask the user for input on how many points the tournament score should 
+   be. The tournament score would be used to determine who is the winner of the tournament. 
+   (15 mins)
+
+ - In the Round Class, I created an outline of the function playRound(). This function will play a round until there is a
+   winner. I also defined a function that will print the round number. 
+   (45 mins)
+
+ - Defined a function that will determine the engine called engineNumber(), this function will take the round number as a 
+   parameter which will help in determining the engine  
+   (15 mins)
+
+Total: (2 hours 15 mins)
+
+September 14, 2017:
+ - Create an outline of the Stock class and what function that may be needed 
+   (15 mins)
+
+ - Defined a vector of pairs called stockSet, this vector will hold the values of the boneyard. The stockSet is initialized
+   to hold the values of the tiles from the beginning. 
+   (30 mins)
+
+ - Defined a function called printSet() that will print the values of stockSet. This function is for checking purposes only.
+   This function may be deleted later. 
+   (15 mins)
+
+ - In the Hand class, I defined a new function called drawTiles() which take in two vectors of pairs and an integer value. 
+   The integer value tells the function how many tiles to draw. I also created a function called displayHand() that takes 
+   a vector of pairs and prints out the elements of the vector. 
+   (1 hour 30 mins)
+
+ - Defined a function called swapPips() that will change the pips of a tile. This function takes in a pair as a parameter 
+   (30 mins)
+
+ - Defined a fucntion called countHand() that will take in a vector of pairs as a parameter. This function will count the
+   pips of a tile and add it to the total sum.
+   (15 mins)
+
+Total: (3 hours 15 mins)
+
+
+September 15, 2017:
+ - Changed the stockSet into an empty vector of pairs and define a new function called createStock. This function will 
+   create the tiles. Within this function, I will called the searchStock() function which will take the values of the pair 
+   and search within the vector to make sure there are no duplicate tiles. 
+   (45 mins)
+
+ - Moved the code of drawTiles() from the Hand class to the Stock class. Also removed a parameter and changed the code to
+   implement the stockSet vector. 
+   (15 mins)
+
+ - Within the Round class, defined a engineSearch() that will search through a players hand and search for the engine. If 
+   the engine is found it will pass a Boolean value of true otherwise it will pass a Boolean value of false. 
+   (30 mins)
+
+ - Outline the function findFirstPlayer() which will call engineSearch(). If the engine is found it will set the Boolean
+   variable firstPlayer to true otherwise it would make the players draw a tile until the engine is found. 
+   (45 mins)
+ 
+Total:(2 hours 15 mins)
+
+
+September 20, 2017:
+ - Defined a getHand() function which will return a vector of pairs to its respective user. 
+   (15 mins)
+
+ - Created an outline of the Player class which will hold all the strategies each user can both use. Some functions that 
+   will be in the Player class are isDouble which will check if the tile we choose is a double and doubleLocation which will
+   let the user choose where the tile can be place. 
+   (1 hour 15 mins)
+
+Total: (1 hour 30 mins)
+
+
+September 21, 2017:
+ - After some testing of the program, I decide to delete some parts of stock class. The functions that was deleted was 
+   swapTiles. I also decided to create a Tile class instead of having a vector of pairs. In the Tile class, we will 
+   intialize the tiles and be able to swap the pips as well. 
+   (1 hour 30 mins)
+
+ - I decided to delete the stockCreate function and initialize the stock in the constructor so when the Stock class 
+   is called the tiles in the stock will already be created and shuffle. 
+   (30 mins)
+
+ - Editing the searchStock function due to problems with duplicate tiles. Now the functions are compatible with the
+   Tile class. 
+   (30 mins)
+
+ - Create Tile functions like getPipsOne, getPipsTwo, setPipsOne, setPipsTwo, pipsAreEqual, and flipTile. The get 
+   function get a specific tiles pips. The set functions set the values of a tile. pipsAreEqual if a tile has the same 
+   number of pips on both side. flipTile will flip the pips of the tile. 
+   (45 mins)
+
+ - Editing the drawTiles function due to errors in the code after testing the program 
+   (30 mins)
+
+Total: (3 hours 45 mins)
+
+
+September 22, 2017:
+ - Deleted the getHand function and move the vectors to the human and computer class respectively. 
+   (15 mins)
+
+ - Created an outline of the Layout class and decided what kind of functions will be in this class. Also created a deque 
+   of pairs as the container that will be the board. 
+   (45 mins)
+
+ - Created an outline of the LayoutView Class which will print the board and display the moves. 
+   (45 mins)
+
+Total: (1 hour 45 mins)
+
+
+September 24, 2017:
+ - Created an outline of the Player Class and some of the functions it may need. 
+   (1 hour 15 mins)
+
+ - Defined the functions that will be needed in the player class. Some of the functions that were defined were chooseTile 
+   which will ask the user to choose a tile, playerMenu will be the menu of what the player can do during their turn.
+   (2 hours)  
+
+Total: (3 hours 15 mins)
+
+
+September 25, 2017:
+ - Edit the Round class member variables to use pointers. Initialize the pointers in the constructor. Also draw the tiles 
+   for each player in the constructor. 
+   (20 mins)
+
+ - Edit the findFirstPlayer function in the Round class so it would be able to work with pointers. 
+   (15 mins)
+
+ - Edit the playerMenu function in the Player class to be a virtual function. Also edit the chooseTile function to be a virtual
+   function. 
+   (25 mins)
+
+Total: (1 hour)
+
+
+September 26, 2017:
+ - In the Layout class create functions placeToLeft and placeToRight to place the tiles on the left and right side of the board. 
+   This function will push the tile onto the board. 
+   (15 mins)
+
+ - In the Layout Class create functions returnTopTile and returnBottomTile to get the first tile from the top and the first tile 
+   on the bottom of the board. This function will be helpful for the Players class to check if the move is legal.
+   (15 mins)
+
+ - Create an outline of the human class and computer class and the functions they may need. 
+   (1 hour 30 mins)
+
+ - Define the virtual function in the human and computer class. Some of the functions that were defined were addTileRight and 
+   addTileLeft. These functions will add the tile to the board depending which function was called.  
+   (1 hour 15 mins)
+
+ - Edit the chooseTile function to be a virtual function and define the function in the human and computer class respectively. Also 
+   move the vectors humanHand and computerHand to the players class and make them protected variables. 
+   (45 mins)
+
+Total: (4 hours)
+
+
+September 27, 2017:
+ - In the Round class create an outline of the function isRoundOver. This function will turn true if one the users hand is empty or 
+   the deck is empty. This function will also return true if both players have passed. 
+   (1 hour)
+
+Total: (1 hour)
+
+
+October 2, 2017:
+ - Create a searchHand function in the Hand Class which will search through a user's hand and check if a specific tile is in the hand. 
+   Return true if it is, false otherwise. 
+   (15 mins)
+
+ - After multiple testing of the game, I decided to delete the virtual getHand function and make the getHumanHand function and 
+   getComputerHand function. 
+   (45 mins)
+
+ - Move the printMenu function from the Player class to the Human class and the Computer class respectively for testing purpose. I also 
+   move alternatePlayer function to the round class and made a few changes to the code. 
+   (15 mins)
+
+ - Edit the isRoundOver function in the Round class to determine when the round is over. If One of hands are empty the function sets 
+   roundOver to true. This can also be possible if the boneyard is empty and both players passed. Otherwise, roundOver is set to false. Also 
+   created a getStock function in the Stock class which returns the stockSet. For the time being the isRoundOver function will only end the 
+   round when either of the user hands is empty or when the boneyard is empty. More work is needed for this function. 
+   (15 mins)
+
+ - Create the setBoard function in the LayoutView class and initialize the LayoutView constructor 
+   (30 mins)
+
+ - Edit the playRound function in the Round class to test the recent function that were made the last few days. After testing the code I 
+   realized that the players functions work and I can draw tiles but there are problems with the layout class. 
+   (30 mins)
+
+Total: (2 hours 30 mins)
+
+
+October 3, 2017:
+ - Editing the isTileLegal function due to tile still being sent to the board even though the tiles are not matching. 
+   (15 mins)
+
+ - After some testing of the program I realizes there must be changes made to the addToLeft and AddToRight function in the human and computer 
+   class due it stating the tile is not legal and still placing the tile on the board. 
+   (45 mins)
+
+ - Create a function in the Stock class to get the size of the stock. 
+   (15 mins)
+
+Total: (1 hour 15 mins)
+
+
+October 4, 2017:
+ - After testing the program multiple times, I realized that there are too many instances of the board being made. Due to this knowledge I 
+   decided to change the vectors to vector pointers and the deque to a deque pointer. Because of this significant change I had to edit many 
+   parts of the code. Including how to access each element when printing and calculating the pips. 
+   (2 hours)
+
+Total: (2 hours)
+
+
+October 5, 2017:
+ - Moved the placeEngine function which is the Player Class to the Layout class and edit the code. After testing the program, the tiles 
+   were finally being displayed to the screen. 
+   (30 mins)
+
+ - Deleted the virtual functions addToRight and addToLeft in the Player class and moved the functions in the human class and computer 
+   class to the board class. Some editing was needed like changing the parameter to include a vector.
+   (45 mins)
+
+ - Deletion of the play menu function in the human and computer class. Then declared a virtual play function in the Player class. Deleted 
+   the Layout and Stock pointer in protected. Instead of initializing a new instance in the player class I will access the board and 
+   boneyard passing them as parameters. 
+   (1 hour 15 mins)      
+
+-  Moved the function isTileLegal to the board class 
+   (15 mins)
+
+Total: (2 hours 45 mins)
+
+
+October 6, 2017:
+ - Edit the chooseTile function in the Player class so it can search the hand if the tile is in the hand before they decide where to place
+   the tile. Also, moved the swapTiles function to the board class. 
+   (25 mins)
+
+ - Created a virtual function in the Player class called passTurn. As of now the function draws a tile and sees if it can be played. 
+   (1 hour 15 mins) 
+
+Total: (1 hour 40 mins)
+
+
+October 7, 2017:
+ - Modified the isTileLegal function by creating two new functions called isTileLegalRight and isTileLegalLeft in the Layout class. This 
+   change is being made after debugging and testing out how the tile is taken from the hand and how they are compare to each other. After 
+   editing the code, I tested the program once more to see if this fixes the error it had received. 
+   (15 mins) 
+
+ - In the Layout class, I defined public variable humanPass and computerPass. In the constructor I set these two variables to false. The 
+   variables will be made true only if they cannot place a tile they have drawn or if there are no more tiles in the boneyard. Also, this 
+   variable will become false after placing a tile. 
+   (15 mins)
+
+ - Create two functions called didHumanPass and didComputerPass which will be called after any user chooses a tile. These functions will 
+   check if the other player has passed or not. If they did then the doubleLocation function will be called. 
+   (15 mins)
+
+ - Move the isTileLegalLeft and Right functions to the Player class. I also moved the addToLeft and Right functions to the Players class 
+   however this time I did not make them virtual functions. I had to edit the code so both the Human and Computer class can use these 
+   functions. 
+   (30 mins) 
+
+ - Change the name of doubleLocation function to chooseLocation. Edit the code in the passTurn function to work with the passing conditions.
+   Also edit the chooseTile function to work with passing conditions. After all the changes, test the code to make sure the game works properly. 
+   (1 hour)
+
+Total: (2 hour 15 mins)
+
+
+October 8, 2017:
+ - Create an outline of the Human help. The help will have a temporary human vector which will hold the possible tiles that can be placed on 
+   the board. To do this, the program must search through the hand and search for the tiles that are legal. When found pushed to the temporary
+   vector. Then the help will look through the temporary vector for a double. If there is no doubles then it will play the tile with greatest 
+   sum. 
+   (1 hour 45 mins)
+
+ - Create an outline of the Computer AI. The Computer AI will do the same things as the human help but will also place the tile on the board. 
+   (30 mins)
+
+Total: (2 hours 15 mins)
+
+
+October 9, 2017:
+ - Define a function called askforHelp which will tell the human user what is the best option they can do during their turn. For the time 
+   being the function prints out many tiles it may be able to play and where to play. The function will be changed later to tell the human
+   user which is the best tile to play. 
+   (45 mins)
+
+ - Define a countPips function that will return the value of the sum of the pips in a tile. 
+   (15 mins)
+
+ - Define a searchForTile function which will search through the human hand and pushback into the temporary vector humanTemp tiles that 
+   may be placed on the board. 
+   (25 mins)
+
+ - Edit the askForHelp fucntion to work with the new functions we have created and test the program. The program now displays a tile that 
+   it believes is the best to play. 
+   (30 mins)
+
+ - Decided to move the chooseLocation function to the human class since the human will make the decision where to put the tile while the 
+   Computer AI would make that decision. 
+   (15 mins)
+
+Total: (2 hours 10 mins) 
+
+
+October 10, 2017:
+ - Delete all the code that we previously had in the play function due to the fact the previous code needs human input. So, the code must 
+   be changed to work with the Computer AI. For the time being, I placed all the code in the play function and will edit the code into 
+   other functions after seeing the code work properly. This function should work just as the human help so it will search for possible 
+   tiles and then determine which is the best tile afterwards. 
+   (1 hour 45 mins) 
+
+ - Define searchForTile in the computer class which will search through the computer hand and choose tiles that are legal, those tiles 
+   will be pushed into the temporary vector called computerTemp 
+   (30 mins)
+
+ - Erase the code in the chooseTile function and replace it with code that will search through the temporary vector for a double. If there 
+   are no doubles then the computer will look for the highest tile. 
+   (30 mins)
+
+ - Test the program and determine if the code is working properly. Edit the code in the searchForTile in the human and computer class so 
+   that it will also look on other side of the board for tiles that may be placed if the player passes. 
+   (45 mins)
+
+ - Edit the chooseTile function in the computer class which will search if a double can be placed on the other side of the board. This 
+   function will also decide where the computer should place a tile if the human passes. 
+   (30 mins)
+
+ - Edit the human help to take in the factor of when the computer passes. 
+   (15 mins)
+
+ - Define a roundScore function in the round class that would calculate the points of each player and determine the winner of the round. 
+   (15 mins)
+
+ - Create functions in the tournament class that will determine who is the winner of the tournament. After this is done I must test the 
+   whole game to check that all the functions that were recently made are working properly. 
+   (30 mins)
+
+Total: (5 hours)
+
+
+October 11, 2017:
+ - Delete the tile class and the print set in the stock class since they were for checking purposes. 
+   (15 mins)
+
+ - Create an outline of the serialization which will save the game in a text file and resume the game when wanted. 
+   (1 hour)
+
+ - Define a class called SaveFile which will open the saved round from a text file and save a round to a text file. 
+   (15 mins)
+
+ - Define a function called savedRound which will save the round into a text file. This function must get the tournament score, the round 
+   number, the computer hand and score, the human hand and score, the board, the boneyard, and the next player of the round. 
+   (30 mins)
+
+Total: (2 hours)
+
+
+October 12, 2017:
+ - Edit the savedRound function due to error being made after testing. 
+   (45 mins)
+
+ - Make changes in the playRound function in the Round class to ask the user if they will like to save the round after a turn. If they would 
+   like to save, then they must return right away. 
+   (15 mins)
+
+ - Make changes in the tournament class to be able to save the game into a text file. The tournament class will check if the round is over. 
+   If it is not over than the functions will ask for a filename, where the round will be saved and then call the saveRound function. 
+   (15 mins)
+
+ - Make functions in the round class so the saveRound will call the variable to get the board, user's hand, and the boneyard. 
+   (15 mins)
+
+Total: (1 hour 30 mins)
+
+
+October 13, 2017:
+ - Make changes to the play round class so we can save the round after we draw 8 tiles and before we are able to find the first player. 
+   (45 mins)
+
+ - Make changes in the saveRound function in the SaveFile class so if the user saves after drawing 8 tiles then the player passed and 
+   next player do not have any values. 
+   (15 mins)
+
+ - Create a function called openSavedRound which will open the file that has the saved the round (this function is not done, more work 
+   is needed) 
+   (1 hour 30 mins)
+
+Total: (2 hour 30 mins)
+
+
+October 14, 2017:
+ - Keep on working on the openSavedRound, and test the program to see if the round is able to get the values that were saved. The program 
+   finally works and the values are now seen. 
+   (1 hour 45 mins)
+
+ - Create a round constructor for the saved round. This will get the board, human and computer hand, the boneyard, the round number, the 
+   current player. 
+   (30 mins)
+
+ - Create a human and computer constructor for the saved round, which initializes the humanHand and the computerHand. 
+   (15 mins)
+
+ - Create a stock constructor for the saved round, which will initialize the stockSet. 
+   (15 mins)
+
+ - Test the program, by saving a game and seeing if I can play the same game again. The game is working properly, the function that were 
+   recently made are working properly. 
+   (30 mins)
+
+Total: (3 hours 15 mins)
+
+
+October 15, 2017:
+ - Test the program with different cases. The cases I tried were playing a new game until one player has hit the tournament score, play a 
+   saved game where the first player was not found, a saved game where the computer has passed, a game where the human has passed. The 
+   program works properly for all cases. 
+   (2 hours)
+
+ - Create headers for the functions in the Stock class and add comments throughout the class. 
+   (30 mins)
+
+ - Create headers for the functions in the Hand class and add comments throughout the class. 
+   (30 mins)
+
+ - Create headers for the functions in the Layout class and add comments throughout the class. 
+   (1 hour 15 mins)
+
+ - Create headers for the functions in the LayoutView class and add comments throughout the class. 
+   (45 mins)
+
+Total: (5 hours)
+
+
+October 16, 2017:
+ - Create headers for the functions in the Players class and add comments throughout the code. 
+   (1 hour)
+
+ - Create headers for the functions in the Human class and add comments throughout the code. 
+   (1 hour)
+
+ - Create headers for the functions in the Computer class and add comments throughout the code. 
+   (1 hour)
+
+ - Create headers for the functions in the Round class and add comments throughout the code. 
+   (1 hour 30 mins)
+
+ - Create headers for the functions in the Tournament class and add comments throughout the code. 
+   (30 mins)
+
+ - Create headers for the functions in the SaveFile class and add comments throughout the code. 
+   (1 hour)
+
+ - Create an Outline of the Manual 
+   (15 mins)
+
+ - Insert the log into the manual and edit the layout of the log 
+   (1 hour)
+
+ - Fix all the warning given out by the program, all the warning was for casting 
+   (15 mins)
+
+Total: (7 hours 30 mins)
