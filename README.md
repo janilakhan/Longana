@@ -1,2 +1,2 @@
-# Longana-C-
+# Longana-C++
 OPL Project - C++ Version
